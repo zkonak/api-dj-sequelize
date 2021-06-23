@@ -1,0 +1,5 @@
+create database api_dj;
+create table api_dj.clubs(id int(6) auto_increment primary key ,  name varchar(50), created_at date,updated_at date);
+create table api_dj.djs(id int(6) auto_increment primary key, url_name varchar(50), name varchar(50),biorgraphy varchar(200),soundcloud varchar(200),facebook varchar(1000),instagram varchar(1000),spotify varchar(1000),beatport varchar(1000),mixcloud varchar(1000),youtube varchar(1000),club_id int(6),created_at date, updated_at date,FOREIGN KEY (club_id) REFERENCES api_dj.clubs(id));
+create table api_dj.musicalgenres(id  int(6) auto_increment primary key, name varchar(50),created_at date,updated_at date);
+create table api_dj.djmusicalgenres(id  int(6) auto_increment primary key,dj_id int(6),musicalgenre_id int(6),created_at date,updated_at date,FOREIGN KEY (dj_id) REFERENCES api_dj.djs(id),FOREIGN KEY (musicalgenre_id) REFERENCES api_dj.musicalgenres(id));

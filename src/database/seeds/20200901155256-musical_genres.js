@@ -1,11 +1,12 @@
 const now = new Date();
+const uuid = require("uuid").v4;
 
 module.exports = [
-  { id: 1, name: "Open Format", created_at: now, updated_at: now },
-  { id: 2, name: "House", created_at: now, updated_at: now },
-  { id: 3, name: "Deep House", created_at: now, updated_at: now },
-  { id: 4, name: "Electro", created_at: now, updated_at: now },
-  { id: 5, name: "Funk", created_at: now, updated_at: now },
-  { id: 6, name: "Hip Hop", created_at: now, updated_at: now },
-  { id: 7, name: "Rap", created_at: now, updated_at: now },
+  { id: uuid(), name: "Open Format", createdAt: now, updatedAt: now },
+  { id: uuid(), name: "House", createdAt: now, updatedAt: now },
+  { id: uuid(), name: "Deep House", createdAt: now, updatedAt: now },
+  { id: uuid(), name: "Electro", createdAt: now, updatedAt: now },
+  { id: uuid(), name: "Funk", createdAt: now, updatedAt: now },
+  { id: uuid(), name: "Hip Hop", createdAt: now, updatedAt: now },
+  { id: uuid(), name: "Rap", createdAt: now, updatedAt: now },
 ];
